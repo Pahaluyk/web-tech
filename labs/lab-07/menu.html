@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://deev.space/media/favicon.ico" type="image/x-icon">
+    <title>Собрать ланч - ЭкоЛанч</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ЭкоЛанч</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="menu.html" id="active">Собрать ланч</a>
+            <a href="delivery.html">Доставка</a>
+            <a href="about.html">О нас</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </header>
+    <main>
+        <section class="combo-section">
+            <h2>Доступные для заказа варианты ланча</h2>
+            <div class="combo-grid">
+                <div class="combo-card">
+                    <div class="combo-item">
+                        <span class="combo-icon">🍲</span>
+                        <p>Суп</p>
+                    </div>
+                    <div class="combo-item">
+                        <span class="combo-icon">🍽️</span>
+                        <p>Главное блюдо</p>
+                    </div>
+                    <div class="combo-item">
+                        <span class="combo-icon">🥗</span>
+                        <p>Салат</p>
+                    </div>
+                    <div class="combo-item">
+                        <span class="combo-icon">🥤</span>
+                        <p>Напиток</p>
+                    </div>
+                </div>
+
+                <div class="combo-card">
+                    <div class="combo-item">
+                        <span class="combo-icon">🍲</span>
+                        <p>Суп</p>
+                    </div>
+                    <div class="combo-item">
+                        <span class="combo-icon">🍽️</span>
+                        <p>Главное блюдо</p>
+                    </div>
+                    <div class="combo-item">
+                        <span class="combo-icon">🥤</span>
+                        <p>Напиток</p>
+                    </div>
+                </div>
+
+                <div class="combo-card">
+                    <div class="combo-item">
+                        <span class="combo-icon">🍲</span>
+                        <p>Суп</p>
+                    </div>
+                    <div class="combo-item">
+                        <span class="combo-icon">🥗</span>
+                        <p>Салат</p>
+                    </div>
+                    <div class="combo-item">
+                        <span class="combo-icon">🥤</span>
+                        <p>Напиток</p>
+                    </div>
+                </div>
+
+                <div class="combo-card">
+                    <div class="combo-item">
+                        <span class="combo-icon">🍽️</span>
+                        <p>Главное блюдо</p>
+                    </div>
+                    <div class="combo-item">
+                        <span class="combo-icon">🥗</span>
+                        <p>Салат</p>
+                    </div>
+                    <div class="combo-item">
+                        <span class="combo-icon">🥤</span>
+                        <p>Напиток</p>
+                    </div>
+                </div>
+
+                <div class="combo-card">
+                    <div class="combo-item">
+                        <span class="combo-icon">🍽️</span>
+                        <p>Главное блюдо</p>
+                    </div>
+                    <div class="combo-item">
+                        <span class="combo-icon">🥤</span>
+                        <p>Напиток</p>
+                    </div>
+                </div>
+
+                <div class="combo-card combo-dessert">
+                    <div class="combo-item">
+                        <span class="combo-icon">🍰</span>
+                        <p>Десерт</p>
+                    </div>
+                    <p class="combo-note-inline">(Можно добавить к любому заказу)</p>
+                </div>
+            </div>
+            <p class="combo-note">Десерты можно добавить к любому варианту ланча</p>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <h2>Супы</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-kind="fish">Рыбный</button>
+                    <button class="filter-btn" data-kind="meat">Мясной</button>
+                    <button class="filter-btn" data-kind="veg">Вегетарианский</button>
+                </div>
+            </div>
+            <div class="dishes-grid" id="soup-section"></div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <h2>Главные блюда</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-kind="fish">Рыбное</button>
+                    <button class="filter-btn" data-kind="meat">Мясное</button>
+                    <button class="filter-btn" data-kind="veg">Вегетарианское</button>
+                </div>
+            </div>
+            <div class="dishes-grid" id="main-course-section"></div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <h2>Салаты и стартеры</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-kind="fish">Рыбный</button>
+                    <button class="filter-btn" data-kind="meat">Мясной</button>
+                    <button class="filter-btn" data-kind="veg">Вегетарианский</button>
+                </div>
+            </div>
+            <div class="dishes-grid" id="salad-section"></div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <h2>Напитки</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-kind="cold">Холодный</button>
+                    <button class="filter-btn" data-kind="hot">Горячий</button>
+                </div>
+            </div>
+            <div class="dishes-grid" id="drink-section"></div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <h2>Десерты</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn" data-kind="small">Маленькая порция</button>
+                    <button class="filter-btn" data-kind="medium">Средняя порция</button>
+                    <button class="filter-btn" data-kind="large">Большая порция</button>
+                </div>
+            </div>
+            <div class="dishes-grid" id="dessert-section"></div>
+        </section>
+    </main>
+
+    <section class="order-form">        
+        <h2>Оформить заказ</h2>
+        <form id="order-form" action="https://httpbin.org/post" method="POST">
+            <div class="form-container">
+
+                <div class="order-section">
+                    <h3>Ваш заказ</h3>
+                    <div id="order-summary">
+                        <p class="empty-order">Ничего не выбрано</p>
+                    </div>
+                </div>
+
+                <div class="customer-section">
+                    <h3>Данные для доставки</h3>
+
+                    <label for="name">Имя</label>
+                    <input type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Введите ваш email" required>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="subscribe" id="subscribe" checked>
+                        <label for="subscribe">Подписаться на рассылку</label>
+                    </div>
+
+                    <label for="phone">Телефон</label>
+                    <input type="tel" name="phone" id="phone" placeholder="Введите ваш телефон" required>
+
+                    <label for="address">Адрес доставки</label>
+                    <input type="text" name="address" id="address" placeholder="Введите адрес доставки" required>
+                    <small class="form-hint">Доставка осуществляется только по Москве</small>
+
+                    <div class="radio-group">
+                        <label>Время доставки</label>
+                        <div>
+                            <input type="radio" name="delivery-time-type" id="asap" value="asap" required>
+                            <label for="asap">Как можно скорее</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="delivery-time-type" id="specific-time" value="specific-time" required>
+                            <label for="specific-time">К определенному времени</label>
+                        </div>
+                    </div>
+
+                    <label for="delivery-time">Указать время</label>
+                    <input type="time" name="delivery-time" id="delivery-time" min="07:00" max="23:00" step="300">
+                    <small class="form-hint">Доступное время доставки с 7:00 до 23:00</small>
+
+                    <label for="comment">Комментарий к заказу</label>
+                    <textarea name="comment" id="comment" placeholder="Введите комментарий к заказу"></textarea>
+
+                    <div class="form-buttons">
+                        <button type="reset">Сбросить</button>
+                        <button type="submit">Отправить заказ</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <footer id="contacts">
+        <p><b>Контактная информация</b></p>
+        <p>Телефон: <a href="tel:+79993737737">+7 (999) 373-77-37</a></p>
+        <p>Email: <a href="mailto:egor@deev.space">egor@deev.space</a></p>
+        <p>Адрес: г. Москва, ул. Михалковская, д. 7, к. 1, офис 813А</p>
+        <p>Режим работы: Пн-Пт с 8:00 до 20:00</p>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+</html>
