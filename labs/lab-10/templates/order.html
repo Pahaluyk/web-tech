@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://deev.space/media/favicon.ico" type="image/x-icon">
+    <title>Оформить заказ - ЭкоЛанч</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <span class="brand-icon">🌿</span>
+                <span class="brand-eco">Эко</span><span class="brand-lunch">Ланч</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Собрать ланч</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="order.html">Оформить заказ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="orders.html">Мои заказы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="delivery.html">Доставка</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacts">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 80px;">
+        <div class="container py-5">
+            <section class="mb-5">
+                <h2 class="text-center mb-4">Состав заказа</h2>
+                <div id="order-dishes" class="dishes-grid"></div>
+                <div id="empty-order" class="empty-order-message hidden">
+                    <p>Ничего не выбрано. Чтобы добавить блюда в заказ, перейдите на страницу <a href="menu.html">Собрать ланч</a>.</p>
+                </div>
+            </section>
+
+            <section class="order-form">
+                <h2>Оформление заказа</h2>
+                <form id="order-form" method="POST">
+                    <div class="form-container">
+                        <div class="order-section">
+                            <h3>Ваш заказ</h3>
+                            <div id="order-summary">
+                                <p class="empty-order">Ничего не выбрано</p>
+                            </div>
+                        </div>
+
+                        <div class="customer-section">
+                            <h3>Данные для доставки</h3>
+
+                            <label for="name">Имя</label>
+                            <input type="text" name="full_name" id="name" placeholder="Введите ваше имя" required>
+
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Введите ваш email" required>
+
+                            <div class="checkbox-group">
+                                <input type="checkbox" name="subscribe" id="subscribe" value="1" checked>
+                                <label for="subscribe">Подписаться на рассылку</label>
+                            </div>
+
+                            <label for="phone">Телефон</label>
+                            <input type="tel" name="phone" id="phone" placeholder="Введите ваш телефон" required>
+
+                            <label for="address">Адрес доставки</label>
+                            <input type="text" name="delivery_address" id="address" placeholder="Введите адрес доставки" required>
+                            <small class="form-hint">Доставка осуществляется только по Москве</small>
+
+                            <div class="radio-group">
+                                <label>Время доставки</label>
+                                <div>
+                                    <input type="radio" name="delivery_type" id="asap" value="now" required checked>
+                                    <label for="asap">Как можно скорее</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="delivery_type" id="specific-time" value="by_time" required>
+                                    <label for="specific-time">К определенному времени</label>
+                                </div>
+                            </div>
+
+                            <label for="delivery-time">Указать время</label>
+                            <input type="time" name="delivery_time" id="delivery-time" min="07:00" max="23:00" step="300">
+                            <small class="form-hint">Доступное время доставки с 7:00 до 23:00</small>
+
+                            <label for="comment">Комментарий к заказу</label>
+                            <textarea name="comment" id="comment" placeholder="Введите комментарий к заказу"></textarea>
+
+                            <div class="form-buttons">
+                                <button type="button" id="reset-button">Сбросить</button>
+                                <button type="submit">Отправить заказ</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer id="contacts" class="footer py-4">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-title">Контактная информация</div>
+                <div class="footer-info">
+                    <div class="footer-row">
+                        <span>Телефон: <a href="tel:+79993737737">+7 (999) 373-77-37</a></span>
+                        <span>Email: <a href="mailto:egor@deev.space">egor@deev.space</a></span>
+                    </div>
+                    <div class="footer-row">
+                        <span>Адрес: г. Москва, ул. Михалковская, д. 7</span>
+                        <span>Режим работы: Пн-Пт с 7:00 до 23:00</span>
+                    </div>
+                    <div class="footer-row footer-copyright">
+                        © 2024 ЭкоЛанч. Все права защищены.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/order.js"></script>
+</body>
+</html>

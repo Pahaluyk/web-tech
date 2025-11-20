@@ -1,0 +1,266 @@
+.empty-order-message {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.empty-order-message.hidden {
+    display: none;
+}
+
+.empty-order-message p {
+    font-size: 18px;
+    color: #666;
+}
+
+.empty-order-message a {
+    color: #2d5016;
+    text-decoration: underline;
+}
+
+.order-form {
+    margin: 0 auto;
+    padding: 40px 60px;
+    max-width: 1200px;
+    background-color: white;
+}
+
+.order-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#order-summary {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.empty-order {
+    text-align: center;
+    color: #888;
+    font-size: 18px;
+}
+
+.order-category {
+    margin-bottom: 25px;
+}
+
+.order-category h3 {
+    font-size: 20px;
+    color: #2d5016;
+    margin: 0 0 10px 0;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.order-item span:first-child {
+    font-weight: 600;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 70%;
+}
+
+.order-item span:last-child {
+    color: #2d5016;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.not-selected {
+    color: #888;
+    font-style: italic;
+    margin: 5px 0;
+}
+
+.order-total {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #2d5016;
+}
+
+.order-total h3 {
+    font-size: 22px;
+    color: #2d5016;
+    margin: 0 0 10px 0;
+}
+
+.total-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2d5016;
+    margin: 0;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.order-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-section h3 {
+    font-size: 22px;
+    color: #2d5016;
+    margin: 0 0 20px 0;
+}
+
+.customer-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-section h3 {
+    font-size: 22px;
+    color: #2d5016;
+    margin: 0 0 20px 0;
+}
+
+.order-form label {
+    font-size: 16px;
+    color: #333;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.order-form select,
+.order-form input[type="text"],
+.order-form input[type="email"],
+.order-form input[type="tel"],
+.order-form input[type="time"],
+.order-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 0 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.order-form select {
+    cursor: pointer;
+    background-color: white;
+}
+
+.order-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin: 0 0 20px 0;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    margin: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.radio-group {
+    margin: 0 0 20px 0;
+}
+
+.radio-group > label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.radio-group > div {
+    display: flex;
+    align-items: center;
+    margin: 0 0 8px 0;
+}
+
+.radio-group input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] + label {
+    margin: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.form-buttons button {
+    flex: 1;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-buttons button[type="button"] {
+    background-color: #f1eee9;
+    color: #333;
+}
+
+.form-buttons button[type="button"]:hover {
+    background-color: #e0ddd8;
+}
+
+.form-buttons button[type="submit"] {
+    background-color: #2d5016;
+    color: white;
+}
+
+.form-buttons button[type="submit"]:hover {
+    background-color: #3d6020;
+}
+
+.form-hint {
+    display: block;
+    font-size: 13px;
+    color: #666;
+    margin: -15px 0 20px 0;
+    line-height: 1.4;
+}
+
+@media (max-width: 800px) {
+    .form-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-container {
+        grid-template-columns: 1fr;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+}
