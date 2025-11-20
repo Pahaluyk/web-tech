@@ -1,0 +1,290 @@
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.section-header h2 {
+    margin: 0;
+}
+
+.combo-section {
+    margin-bottom: 50px;
+}
+
+.combo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.combo-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.combo-dessert {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.combo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.combo-icon {
+    font-size: 50px;
+    display: block;
+    margin: 0 0 8px 0;
+    transition: transform 0.3s;
+}
+
+.combo-item:hover .combo-icon {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.combo-item p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.combo-note-inline {
+    font-size: 12px;
+    text-align: center;
+    color: #666;
+    margin: 0;
+    font-style: italic;
+}
+
+.combo-note {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: white;
+    border: 2px solid #2d5016;
+    color: #2d5016;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #f1eee9;
+}
+
+.filter-btn.active {
+    background-color: #2d5016;
+    color: white;
+}
+
+.dishes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.dish-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 35px;
+    cursor: pointer;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    background-color: white;
+}
+
+.dish-card.selected {
+    border: 3px solid #2d5016;
+    background-color: #f0f7ec;
+}
+
+.dish-card.selected button {
+    background-color: #2d5016;
+    color: white;
+}
+
+.dish-card:hover {
+    border: 2px solid tomato;
+}
+
+.dish-card:hover button {
+    background-color: tomato;
+    color: white;
+}
+
+.dish-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 12 / 9;
+    object-fit: cover;
+    border-radius: 35px;
+    margin: 0 0 15px 0;
+}
+
+.dish-price {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.dish-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.dish-weight {
+    color: #888;
+    margin: 0 0 10px 0;
+    margin-top: auto;
+}
+
+.dish-card button {
+    background-color: #f1eee9;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.remove-dish-btn {
+    background-color: tomato;
+    color: white;
+}
+
+.remove-dish-btn:hover {
+    background-color: #ff4500;
+}
+
+.order-panel {
+    position: sticky;
+    bottom: 20px;
+    background-color: white;
+    padding: 20px 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.order-panel.hidden {
+    display: none;
+}
+
+.order-panel-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.order-panel-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.order-panel-label {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.order-panel-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2d5016;
+    margin: 0;
+}
+
+.order-panel-button {
+    background-color: #2d5016;
+    color: white;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.order-panel-button:hover {
+    background-color: #3d6020;
+}
+
+.order-panel-button.disabled {
+    background-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+@media (max-width: 800px) {
+    .combo-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dishes-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .order-panel-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .combo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dishes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .order-panel {
+        padding: 15px 20px;
+    }
+
+    .order-panel-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .order-panel-button {
+        text-align: center;
+    }
+}
