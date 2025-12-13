@@ -1,3 +1,4 @@
+
 // Объект для хранения выбранных блюд
 const selectedDishes = {
     burger: null,
@@ -19,6 +20,9 @@ function addDishToOrder(dishKeyword) {
     
     // Обновляем отображение заказа
     updateOrderDisplay();
+    
+    // Добавляем скрытые поля в форму
+    updateOrderForm();
 }
 
 // Функция для обновления отображения раздела "Ваш заказ"
@@ -137,6 +141,46 @@ function updateOrderDisplay() {
     }
 }
 
+// Функция для добавления скрытых полей в форму
+function updateOrderForm() {
+    const form = document.getElementById('order-form');
+    if (!form) return;
+    
+    // Удаляем старые скрытые поля заказа
+    const oldFields = form.querySelectorAll('[data-order-field]');
+    oldFields.forEach(field => field.remove());
+    
+    // Создаем скрытые поля для выбранных блюд
+    if (selectedDishes.burger) {
+        addHiddenInput(form, 'burger', `${selectedDishes.burger.name} - ${selectedDishes.burger.price} руб.`);
+    }
+    if (selectedDishes.side) {
+        addHiddenInput(form, 'side', `${selectedDishes.side.name} - ${selectedDishes.side.price} руб.`);
+    }
+    if (selectedDishes.salad) {
+        addHiddenInput(form, 'salad', `${selectedDishes.salad.name} - ${selectedDishes.salad.price} руб.`);
+    }
+    if (selectedDishes.drink) {
+        addHiddenInput(form, 'drink', `${selectedDishes.drink.name} - ${selectedDishes.drink.price} руб.`);
+    }
+    if (selectedDishes.dessert) {
+        addHiddenInput(form, 'dessert', `${selectedDishes.dessert.name} - ${selectedDishes.dessert.price} руб.`);
+    }
+    
+    // Добавляем общую стоимость
+    addHiddenInput(form, 'total', `${calculateTotal()} руб.`);
+}
+
+// Вспомогательная функция для добавления скрытого поля
+function addHiddenInput(form, name, value) {
+    const input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = name;
+    input.value = value;
+    input.setAttribute('data-order-field', 'true');
+    form.appendChild(input);
+}
+
 // Функция для подсчета итоговой стоимости
 function calculateTotal() {
     let total = 0;
@@ -164,4 +208,5 @@ document.addEventListener('click', function(event) {
 // Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', function() {
     updateOrderDisplay();
+    updateOrderForm();
 });
